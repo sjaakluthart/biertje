@@ -19,17 +19,36 @@ class Beers extends Component {
 
   render() {
     const { beers, styles } = this.props;
-    console.log(styles);
 
     return (
       <section className="page">
         <h1>Bieren</h1>
+        <section className="styles">
+          {map(styles, style => (
+            <section
+              className={style}
+              key={style}
+            >
+              {style}
+            </section>
+          ))}
+        </section>
         <section>
           {map(beers, beer => (
             <section key={beer.name} className={classNames('beer', beer.style)}>
-              <h1>{beer.name}</h1>
-              <p>{beer.style}</p>
-              <BeerIcon />
+              <div>
+                <header>
+                  <h1>{beer.name}</h1><span>-</span><h2>{beer.brewery}</h2>
+                </header>
+                <section>
+                  <p>Alcohol: {beer.alcohol}%</p>
+                  <p>Fust: {beer.keg}, {beer.volume} liter</p>
+                </section>
+              </div>
+              <div className="style-icon">
+                <BeerIcon />
+                <p>{beer.style}</p>
+              </div>
             </section>
           ))}
         </section>

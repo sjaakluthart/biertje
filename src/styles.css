@@ -4,15 +4,18 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
   background-color: #FEFEFE;
+  font-size: 16px;
 }
 
 h1,
 h2 {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .main {
   padding: 24px;
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 .main > header {
@@ -28,7 +31,7 @@ h2 {
 }
 
 .main > header img {
-  width: 56px;
+  width: 64px;
   margin-right: 16px;
 }
 
@@ -41,7 +44,44 @@ h2 {
   font-size: 24px;
   line-height: 24px;
   font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.beer {
+  display: flex;
+  margin-bottom: 12px;
+  justify-content: space-between;
+}
+
+.beer header {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 8px;
+}
+
+.beer header h2 {
+  font-weight: 300;
+}
+
+.beer header span {
+  margin: 0 4px;
+}
+
+.beer .style-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.beer .style-icon p {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+.beer svg {
+  width: 40px;
+  height: 40px;
 }
 
 .Saison .style-color {
@@ -69,5 +109,57 @@ h2 {
   fill: #FBD978;
 }
 .Lager .style-color {
-  fill: #F8F3ED;
+  fill: #f7df94;
+}
+
+.styles {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.styles section {
+  color: #FEFEFE;
+  font-weight: 400;
+  padding: 6px 4px 4px;
+  margin: 4px;
+  display: block;
+  border-radius: 2px;
+  line-height: 16px;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.styles section.active,
+.styles section:hover {
+  opacity: 1;
+}
+
+.styles .Saison {
+  background-color: #F8B005;
+}
+.styles .Dubbel {
+  background-color: #D06900;
+}
+.styles .Tripel {
+  background-color: #F2A205;
+}
+.styles .IPA {
+  background-color: #F8A700;
+}
+.styles .Pils {
+  background-color: #F9C045;
+}
+.styles .Stout {
+  background-color: #35070A;
+}
+.styles .Blond {
+  background-color: #F8B026;
+}
+.styles .Witbier {
+  background-color: #FBD978;
+}
+.styles .Lager {
+  background-color: #f7df94;
 }
