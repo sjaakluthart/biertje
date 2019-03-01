@@ -1,9 +1,9 @@
 const prefix = '@@biertje/loading';
 
-const START = `${prefix}/start`;
-const STOP = `${prefix}/stop`;
-const CLEAR = `${prefix}/clear`;
-const CLEAR_ALL = `${prefix}/clear_all`;
+const START = `${prefix}/START`;
+const STOP = `${prefix}/STOP`;
+const CLEAR = `${prefix}/CLEAR`;
+const CLEAR_ALL = `${prefix}/CLEAR_ALL`;
 
 export {
   START,
