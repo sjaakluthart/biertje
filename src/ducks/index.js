@@ -1,3 +1,7 @@
+import beers from './beers';
 import loading from './loading';
 
-export { loading };
+export {
+  beers,
+  loading
+};
