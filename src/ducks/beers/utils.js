@@ -106,8 +106,6 @@ const addStyles = (state, action) => {
         return result;
       }
 
-      console.log(union(style, [value.name]));
-
       return {
         ...result,
         [value.style]: union(style, [value.name])
