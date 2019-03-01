@@ -1,22 +1,14 @@
 import * as types from './types';
 import * as actions from './actions';
+import * as utils from './utils';
 
 export default (state = {}, action = {}) => {
   switch (action.type) {
-    case types.START:
-
-      break;
-    case types.STOP:
-
-      break;
-    case types.CLEAR:
-
-      break;
-    case types.CLEAR_ALL:
-
-      break;
-    default:
-      return state;
+    case types.START: return utils.start(state, action);
+    case types.STOP: return utils.stop(state, action);
+    case types.CLEAR: return utils.clear(state, action);
+    case types.CLEAR_ALL: return utils.clearAll(state, action);
+    default: return state;
   }
 };
 
