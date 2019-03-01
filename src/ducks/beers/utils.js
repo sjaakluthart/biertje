@@ -27,9 +27,10 @@ const addMultiple = (state, action) => {
 
   return reduce(
     action.payload,
-    (result, value) => {
-      console.log(result, value);
-    },
+    (result, value) => ({
+      ...result,
+      [value.name]: value
+    }),
     state
   )
 }
