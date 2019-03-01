@@ -1,6 +1,7 @@
 import * as types from './types';
 import * as actions from './actions';
 import * as utils from './utils';
+import * as selectors from './selectors';
 
 export default (state = {}, action = {}) => {
   switch (action.type) {
@@ -12,4 +13,7 @@ export default (state = {}, action = {}) => {
   }
 };
 
-export { actions };
+export {
+  actions,
+  selectors
+};
