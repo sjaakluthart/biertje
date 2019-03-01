@@ -17,6 +17,7 @@ h2 {
 
 .main > header {
   padding-bottom: 16px;
+  margin-bottom: 16px;
   border-bottom: 2px solid;
 }
 
@@ -34,4 +35,39 @@ h2 {
 .main > header {
   display: flex;
   align-items: center;
+}
+
+.page > h1 {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.Saison .style-color {
+  fill: #F8B005;
+}
+.Dubbel .style-color {
+  fill: #D06900;
+}
+.Tripel .style-color {
+  fill: #F2A205;
+}
+.IPA .style-color {
+  fill: #F8A700;
+}
+.Pils .style-color {
+  fill: #F9C045;
+}
+.Stout .style-color {
+  fill: #35070A;
+}
+.Blond .style-color {
+  fill: #F8B026;
+}
+.Witbier .style-color {
+  fill: #FBD978;
+}
+.Lager .style-color {
+  fill: #F8F3ED;
 }
