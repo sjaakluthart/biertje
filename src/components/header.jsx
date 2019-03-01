@@ -1,5 +1,5 @@
 import React from 'react';
-import beer from '../../assets/images/beer.svg';
+import beer from '../assets/images/beer.svg';
 
 const Header = () => (
   <header>
