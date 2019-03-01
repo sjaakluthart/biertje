@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  beers: PropTypes.objectOf(PropTypes.object).isRequired,
+  getBeers: PropTypes.func.isRequired
+};
 
 class Beers extends Component {
   componentDidMount() {
+    const { getBeers } = this.props;
+
     console.log('get the beers!');
+    getBeers();
   }
 
   render() {
@@ -13,5 +22,7 @@ class Beers extends Component {
     );
   }
 }
+
+Beers.propTypes = propTypes;
 
 export default Beers;
