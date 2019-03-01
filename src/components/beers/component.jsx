@@ -11,7 +11,6 @@ class Beers extends Component {
   componentDidMount() {
     const { getBeers } = this.props;
 
-    console.log('get the beers!');
     getBeers();
   }
 
