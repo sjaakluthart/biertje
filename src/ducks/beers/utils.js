@@ -2,6 +2,8 @@ import get from 'lodash/get';
 import isEmpty from 'lodash/isEmpty';
 import reduce from 'lodash/reduce';
 import omit from 'lodash/omit';
+import union from 'lodash/union';
+import includes from 'lodash/includes';
 
 const add = (state, action) => {
   if (isEmpty(action.payload.name)) {
@@ -59,9 +61,69 @@ const removeMultiple = (state, action) => {
   return omit(state, action.payload);
 };
 
+const addStyle = (state, action) => {
+  if (isEmpty(action.payload)) {
+    return state;
+  }
+
+  const style = get(state, action.payload.style) || [];
+
+  if (isEmpty(style)) {
+    return {
+      ...state,
+      [action.payload.style]: [action.payload.name]
+    }
+  }
+
+  if (includes(style, action.payload.name)) {
+    return state;
+  }
+
+  return {
+    ...state,
+    [action.payload.style]: union(style, [action.payload.name])
+  }
+};
+
+const addStyles = (state, action) => {
+  if (isEmpty(action.payload)) {
+    return state;
+  }
+
+  return reduce(
+    action.payload,
+    (result, value) => {
+      const style = get(result, value.style) || [];
+
+      if (isEmpty(style)) {
+        return {
+          ...result,
+          [value.style]: [value.name]
+        }
+      }
+
+      if (includes(style, value.name)) {
+        return result;
+      }
+
+      console.log(union(style, [value.name]));
+
+      return {
+        ...result,
+        [value.style]: union(style, [value.name])
+      }
+    },
+    state
+  )
+}
+
+// TODO: add remove style utils
+
 export {
   add,
   addMultiple,
   remove,
-  removeMultiple
+  removeMultiple,
+  addStyle,
+  addStyles
 };

@@ -16,8 +16,8 @@ const byName = (state = {}, action = {}) => {
 
 const byStyle = (state = {}, action = {}) => {
   switch (action.type) {
-    case types.ADD: return utils.add(state, action);
-    case types.ADD_MULTIPLE: return utils.add(state, action);
+    case types.ADD: return utils.addStyle(state, action);
+    case types.ADD_MULTIPLE: return utils.addStyles(state, action);
     case types.REMOVE: return utils.add(state, action);
     case types.REMOVE_MULTIPLE: return utils.add(state, action);
     default: return state;
