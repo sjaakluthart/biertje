@@ -56,7 +56,7 @@ class Beers extends Component {
             </section>
           ))}
         </section>
-        <BeerList />
+        <BeerList styles={activeStyles} />
       </section>
     );
   }
