@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import map from 'lodash/map';
-import Beer from '../beer';
+import BeerList from '../beer-list';
 
 const propTypes = {
   beers: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -17,7 +17,7 @@ class Beers extends Component {
   }
 
   render() {
-    const { beers, styles } = this.props;
+    const { styles } = this.props;
 
     return (
       <section className="page">
@@ -32,9 +32,7 @@ class Beers extends Component {
             </section>
           ))}
         </section>
-        <section>
-          {map(beers, beer => <Beer key={beer} name={beer} />)}
-        </section>
+        <BeerList />
       </section>
     );
   }
