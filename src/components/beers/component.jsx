@@ -4,7 +4,7 @@ import map from 'lodash/map';
 import Beer from '../beer';
 
 const propTypes = {
-  beers: PropTypes.objectOf(PropTypes.object).isRequired,
+  beers: PropTypes.arrayOf(PropTypes.string).isRequired,
   styles: PropTypes.arrayOf(PropTypes.string).isRequired,
   getBeers: PropTypes.func.isRequired
 };
@@ -33,7 +33,7 @@ class Beers extends Component {
           ))}
         </section>
         <section>
-          {map(beers, beer => <Beer key={beer.name} name={beer.name} />)}
+          {map(beers, beer => <Beer key={beer} name={beer} />)}
         </section>
       </section>
     );
