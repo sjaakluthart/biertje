@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Album from './component';
+import Beer from './component';
 import { selectors as beersSelectors } from '../../ducks/beers';
 import { getBeers } from '../../operations/beers';
 
@@ -12,4 +12,4 @@ const mapDispatchToProps = dispatch => ({
   getBeers: () => dispatch(getBeers())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Album);
+export default connect(mapStateToProps, mapDispatchToProps)(Beer);
