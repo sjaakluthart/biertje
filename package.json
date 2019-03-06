@@ -37,5 +37,6 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.0",
     "gh-pages": "^2.0.1"
-  }
+  },
+  "homepage" : "http://sjaakluthart.github.io/biertje"
 }
