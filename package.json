@@ -12,6 +12,7 @@
     "react-redux": "^6.0.1",
     "react-scripts": "2.1.5",
     "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
@@ -39,5 +40,5 @@
     "eslint-plugin-react": "^7.11.0",
     "gh-pages": "^2.0.1"
   },
-  "homepage" : "http://sjaakluthart.github.io/biertje"
+  "homepage": "http://sjaakluthart.github.io/biertje"
 }
