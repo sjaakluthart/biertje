@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   getBreweries: PropTypes.func.isRequired,
-  getCityByPostcode: PropTypes.func.isRequired
+  getCityByPostcode: PropTypes.func.isRequired,
+  currentCity: PropTypes.string.isRequired
 };
 
 class Breweries extends Component {
@@ -35,6 +36,7 @@ class Breweries extends Component {
 
   render() {
     const { postcodeArea } = this.state;
+    const { currentCity } = this.props;
 
     return (
       <section className="page">
@@ -48,6 +50,13 @@ class Breweries extends Component {
           />
           <button type="submit">zoek</button>
         </form>
+        <section>
+          <h1>
+            Brouwerijen in&nbsp;
+            {currentCity}
+            :
+          </h1>
+        </section>
       </section>
     );
   }

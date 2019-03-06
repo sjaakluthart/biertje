@@ -181,6 +181,7 @@ h2 {
 
 form {
   display: flex;
+  margin-bottom: 12px;
 }
 
 input {
