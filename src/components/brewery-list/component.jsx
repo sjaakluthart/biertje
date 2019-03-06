@@ -14,7 +14,7 @@ const BreweryList = ({ breweries, breweriesByCity, city }) => {
   if (isEmpty(breweriesByCity)) {
     return (
       <section>
-        {map(breweries, brewery => <Brewery name={brewery} />)}
+        {map(breweries, brewery => <Brewery name={brewery} key={brewery} />)}
       </section>
     );
   }
@@ -25,7 +25,7 @@ const BreweryList = ({ breweries, breweriesByCity, city }) => {
         Brouwerijen in&nbsp;
         {city}
       </h1>
-      {map(breweriesByCity, brewery => <Brewery name={brewery} />)}
+      {map(breweriesByCity, brewery => <Brewery name={brewery} key={brewery} />)}
     </section>
   );
 };
