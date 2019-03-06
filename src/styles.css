@@ -58,6 +58,10 @@ h2 {
   border-bottom: 2px solid;
 }
 
+.page h1 {
+  margin-bottom: 8px;
+}
+
 .beer {
   display: flex;
   margin-bottom: 12px;
@@ -173,4 +177,31 @@ h2 {
 }
 .styles .Lager {
   background-color: #f7df94;
+}
+
+form {
+  display: flex;
+}
+
+input {
+  outline: none;
+  font-size: 16px;
+  border: 0;
+  padding: 4px;
+  background-color: #f7f7f7;
+  border-radius: 2px;
+  width: 80px;
+}
+
+button {
+  outline: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background-color: #F8B005;
+  border: none;
+  color: #FEFEFE;
+  margin-left: 12px;
+  cursor: pointer;
 }

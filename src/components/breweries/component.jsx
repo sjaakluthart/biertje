@@ -38,6 +38,7 @@ class Breweries extends Component {
 
     return (
       <section className="page">
+        <h1>Zoek een brouwerij op postcode</h1>
         <form onSubmit={this.handleSubmit}>
           <input
             value={postcodeArea}
@@ -45,9 +46,7 @@ class Breweries extends Component {
             maxLength={4}
             placeholder="1234"
           />
-          <button type="submit">
-            Zoek brouwerijen
-          </button>
+          <button type="submit">zoek</button>
         </form>
       </section>
     );
