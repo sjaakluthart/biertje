@@ -7,17 +7,48 @@ const propTypes = {
 };
 
 class Breweries extends Component {
-  componentDidMount() {
-    const { getBreweries, getCityByPostcode } = this.props;
-
-    getBreweries();
-    getCityByPostcode('2023');
+  state = {
+    postcodeArea: ''
   }
 
+  componentDidMount() {
+    const { getBreweries } = this.props;
+
+    getBreweries();
+  }
+
+  handleInputChange = (event) => {
+    this.setState({
+      postcodeArea: event.currentTarget.value
+    });
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+
+    const { getCityByPostcode } = this.props;
+    const { postcodeArea } = this.state;
+
+    getCityByPostcode(postcodeArea);
+  }
+
+
   render() {
+    const { postcodeArea } = this.state;
+
     return (
       <section className="page">
-        <h1>Brouwerijen komen hiero</h1>
+        <form onSubmit={this.handleSubmit}>
+          <input
+            value={postcodeArea}
+            onChange={this.handleInputChange}
+            maxLength={4}
+            placeholder="1234"
+          />
+          <button type="submit">
+            Zoek brouwerijen
+          </button>
+        </form>
       </section>
     );
   }
