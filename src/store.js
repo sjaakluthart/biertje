@@ -1,15 +1,12 @@
 /* eslint no-underscore-dangle: ["error", { "allow": ["__REDUX_DEVTOOLS_EXTENSION__"] }] */
-/* global window */
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
 import reduxThunk from 'redux-thunk';
 import rootReducer from './root-reducer';
 
 const store = createStore(
   rootReducer,
-  compose(
-    applyMiddleware(reduxThunk),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  )
+  composeWithDevTools(applyMiddleware(reduxThunk))
 );
 
 export default store;
