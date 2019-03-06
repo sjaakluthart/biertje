@@ -4,7 +4,6 @@ import { selectors as beersSelectors } from '../../ducks/beers';
 import { getBeers } from '../../operations/beers';
 
 const mapStateToProps = state => ({
-  beers: beersSelectors.getBeerNames(state.beers),
   styles: beersSelectors.getStyles(state.beers)
 });
 
