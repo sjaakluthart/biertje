@@ -10,7 +10,7 @@ const stop = key => ({
   payload: key
 });
 
-const clear = key => ({
+const clear = () => ({
   type: types.CLEAR,
   payload: clear
 });

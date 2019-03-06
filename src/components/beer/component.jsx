@@ -18,11 +18,23 @@ const Beer = ({ beer }) => (
   <section className={classNames('beer', beer.style)}>
     <div>
       <header>
-        <h1>{beer.name}</h1><span>-</span><h2>{beer.brewery}</h2>
+        <h1>{beer.name}</h1>
+        <span>-</span>
+        <h2>{beer.brewery}</h2>
       </header>
       <section>
-        <p>Alcohol: {beer.alcohol}%</p>
-        <p>Fust: {beer.keg}, {beer.volume} liter</p>
+        <p>
+          Alcohol:&nbsp;
+          {beer.alcohol}
+          %
+        </p>
+        <p>
+          Fust:&nbsp;
+          {beer.keg}
+          ,&nbsp;
+          {beer.volume}
+          &nbsp;liter
+        </p>
       </section>
     </div>
     <div className="style-icon">

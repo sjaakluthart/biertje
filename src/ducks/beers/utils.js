@@ -34,8 +34,8 @@ const addMultiple = (state, action) => {
       [value.name]: value
     }),
     state
-  )
-}
+  );
+};
 
 const remove = (state, action) => {
   if (isEmpty(action.payload)) {
@@ -72,7 +72,7 @@ const addStyle = (state, action) => {
     return {
       ...state,
       [action.payload.style]: [action.payload.name]
-    }
+    };
   }
 
   if (includes(style, action.payload.name)) {
@@ -82,7 +82,7 @@ const addStyle = (state, action) => {
   return {
     ...state,
     [action.payload.style]: union(style, [action.payload.name])
-  }
+  };
 };
 
 const addStyles = (state, action) => {
@@ -99,7 +99,7 @@ const addStyles = (state, action) => {
         return {
           ...result,
           [value.style]: [value.name]
-        }
+        };
       }
 
       if (includes(style, value.name)) {
@@ -109,11 +109,11 @@ const addStyles = (state, action) => {
       return {
         ...result,
         [value.style]: union(style, [value.name])
-      }
+      };
     },
     state
-  )
-}
+  );
+};
 
 // TODO: add remove style utils
 

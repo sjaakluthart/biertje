@@ -8,7 +8,6 @@ import classNames from 'classnames';
 import BeerList from '../beer-list';
 
 const propTypes = {
-  beers: PropTypes.arrayOf(PropTypes.string).isRequired,
   styles: PropTypes.arrayOf(PropTypes.string).isRequired,
   getBeers: PropTypes.func.isRequired
 };

@@ -34,7 +34,7 @@ const clear = (state, action) => {
   }
 
   return omit(state, action.payload);
-}
+};
 
 const clearAll = () => ({});
 
