@@ -1,28 +1,34 @@
 import * as types from './types';
 
-const add = beer => ({
+const add = brewery => ({
   type: types.ADD,
-  payload: beer
+  payload: brewery
 });
 
-const addMultiple = beers => ({
+const addMultiple = breweries => ({
   type: types.ADD_MULTIPLE,
-  payload: beers
+  payload: breweries
 });
 
-const remove = beer => ({
+const remove = brewery => ({
   type: types.REMOVE,
-  payload: beer
+  payload: brewery
 });
 
-const removeMultiple = beers => ({
+const removeMultiple = breweries => ({
   type: types.REMOVE_MULTIPLE,
-  payload: beers
+  payload: breweries
+});
+
+const setCurrentCity = city => ({
+  type: types.SET_CURRENT_CITY,
+  payload: city
 });
 
 export {
   add,
   addMultiple,
   remove,
-  removeMultiple
+  removeMultiple,
+  setCurrentCity
 };

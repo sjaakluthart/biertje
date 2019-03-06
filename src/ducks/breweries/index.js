@@ -24,9 +24,17 @@ const byCity = (state = {}, action = {}) => {
   }
 };
 
+const currentCity = (state = '', action = {}) => {
+  switch (action.type) {
+    case types.SET_CURRENT_CITY: return action.payload;
+    default: return state;
+  }
+};
+
 export default combineReducers({
   byName,
-  byCity
+  byCity,
+  currentCity
 });
 
 export {
