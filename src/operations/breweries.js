@@ -32,7 +32,7 @@ const getCityByPostcodeResult = (dispatch, result) => {
     return false;
   }
 
-  return false;
+  return dispatch(breweriesActions.setCurrentCity(city));
 };
 
 const getCityByPostcode = postcodeArea => (
