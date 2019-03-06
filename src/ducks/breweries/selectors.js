@@ -8,11 +8,13 @@ const getBreweryNames = state => keys(state.byName);
 const getBreweryByName = (state, name) => get(state.byName, name);
 const getCities = state => keys(state.byCity);
 const getBreweryNamesByCity = (state, cities) => flatMap(pick(state.byCity, cities));
+const getCurrentCity = state => state.currentCity;
 
 export {
   getBreweries,
   getBreweryNames,
   getBreweryByName,
   getCities,
-  getBreweryNamesByCity
+  getBreweryNamesByCity,
+  getCurrentCity
 };
