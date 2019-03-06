@@ -9,5 +9,5 @@ const getBeers = () => (
 );
 
 export {
-  getBeers
+  getBeers // eslint-disable-line import/prefer-default-export
 };
