@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import BreweryList from '../brewery-list';
 
 const propTypes = {
   getBreweries: PropTypes.func.isRequired,
@@ -50,13 +51,7 @@ class Breweries extends Component {
           />
           <button type="submit">zoek</button>
         </form>
-        <section>
-          <h1>
-            Brouwerijen in&nbsp;
-            {currentCity}
-            :
-          </h1>
-        </section>
+        <BreweryList city={currentCity} />
       </section>
     );
   }
