@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Breweries from './component';
-import { selectors as breweriesSelectors } from '../../ducks/breweries';
+import { actions as breweriesActions, selectors as breweriesSelectors } from '../../ducks/breweries';
 import { getBreweries, getCityByPostcode } from '../../operations/breweries';
 
 const mapStateToProps = state => ({
@@ -8,6 +8,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  unsetCurrentCity: () => dispatch(breweriesActions.unsetCurrentCity()),
   getBreweries: () => dispatch(getBreweries()),
   getCityByPostcode: postcodeArea => dispatch(getCityByPostcode(postcodeArea))
 });
