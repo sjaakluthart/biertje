@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  getBreweries: PropTypes.func.isRequired
+  getBreweries: PropTypes.func.isRequired,
+  getCityByPostcode: PropTypes.func.isRequired
 };
 
 class Breweries extends Component {
   componentDidMount() {
-    const { getBreweries } = this.props;
+    const { getBreweries, getCityByPostcode } = this.props;
 
     getBreweries();
+    getCityByPostcode('2023');
   }
 
   render() {
