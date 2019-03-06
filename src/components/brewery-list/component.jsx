@@ -14,7 +14,6 @@ const BreweryList = ({ breweries, breweriesByCity, city }) => {
   if (isEmpty(breweriesByCity)) {
     return (
       <section>
-        <h1>Alle brouwerijen</h1>
         {map(breweries, brewery => <Brewery name={brewery} />)}
       </section>
     );
