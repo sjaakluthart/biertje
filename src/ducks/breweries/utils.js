@@ -66,22 +66,22 @@ const addCity = (state, action) => {
     return state;
   }
 
-  const style = get(state, action.payload.style) || [];
+  const city = get(state, action.payload.city) || [];
 
-  if (isEmpty(style)) {
+  if (isEmpty(city)) {
     return {
       ...state,
-      [action.payload.style]: [action.payload.name]
+      [action.payload.city]: [action.payload.name]
     };
   }
 
-  if (includes(style, action.payload.name)) {
+  if (includes(city, action.payload.name)) {
     return state;
   }
 
   return {
     ...state,
-    [action.payload.style]: union(style, [action.payload.name])
+    [action.payload.city]: union(city, [action.payload.name])
   };
 };
 
@@ -93,29 +93,29 @@ const addCities = (state, action) => {
   return reduce(
     action.payload,
     (result, value) => {
-      const style = get(result, value.style) || [];
+      const city = get(result, value.city) || [];
 
-      if (isEmpty(style)) {
+      if (isEmpty(city)) {
         return {
           ...result,
-          [value.style]: [value.name]
+          [value.city]: [value.name]
         };
       }
 
-      if (includes(style, value.name)) {
+      if (includes(city, value.name)) {
         return result;
       }
 
       return {
         ...result,
-        [value.style]: union(style, [value.name])
+        [value.city]: union(city, [value.name])
       };
     },
     state
   );
 };
 
-// TODO: add remove style utils
+// TODO: add remove city utils
 
 export {
   add,
