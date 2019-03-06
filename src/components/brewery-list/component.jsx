@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import map from 'lodash/map';
 import isEmpty from 'lodash/isEmpty';
+import Brewery from '../brewery';
 
 const propTypes = {
   breweries: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -14,7 +15,7 @@ const BreweryList = ({ breweries, breweriesByCity, city }) => {
     return (
       <section>
         <h1>Alle brouwerijen</h1>
-        {map(breweries, brewery => <p>{brewery}</p>)}
+        {map(breweries, brewery => <Brewery name={brewery} />)}
       </section>
     );
   }
@@ -25,7 +26,7 @@ const BreweryList = ({ breweries, breweriesByCity, city }) => {
         Brouwerijen in&nbsp;
         {city}
       </h1>
-      {map(breweriesByCity, brewery => <p>{brewery}</p>)}
+      {map(breweriesByCity, brewery => <Brewery name={brewery} />)}
     </section>
   );
 };

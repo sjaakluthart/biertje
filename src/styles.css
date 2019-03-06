@@ -206,3 +206,11 @@ button {
   margin-left: 12px;
   cursor: pointer;
 }
+
+.brewery {
+  margin-bottom: 12px;
+}
+
+.brewery header h2 {
+  font-weight: 300;
+}
