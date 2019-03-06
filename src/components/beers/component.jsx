@@ -43,7 +43,6 @@ class Beers extends Component {
 
     return (
       <section className="page">
-        <h1>Bieren</h1>
         <section className="styles">
           {map(styles, style => (
             <section

@@ -15,7 +15,7 @@ class Breweries extends Component {
   render() {
     return (
       <section className="page">
-        <h1>Brouwerijen</h1>
+        <h1>Brouwerijen komen hiero</h1>
       </section>
     );
   }

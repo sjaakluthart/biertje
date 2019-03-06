@@ -40,11 +40,22 @@ h2 {
   align-items: center;
 }
 
-.page > h1 {
+.app > header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.app > header > h1 {
   font-size: 24px;
   line-height: 24px;
   font-weight: 600;
   margin-bottom: 12px;
+}
+
+.app > header > h1:hover,
+.app > header > h1.active {
+  border-bottom: 2px solid;
 }
 
 .beer {
