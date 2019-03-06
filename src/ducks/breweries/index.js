@@ -27,6 +27,7 @@ const byCity = (state = {}, action = {}) => {
 const currentCity = (state = '', action = {}) => {
   switch (action.type) {
     case types.SET_CURRENT_CITY: return action.payload;
+    case types.UNSET_CURRENT_CITY: return '';
     default: return state;
   }
 };

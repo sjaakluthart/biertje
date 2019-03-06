@@ -25,10 +25,16 @@ const setCurrentCity = city => ({
   payload: city
 });
 
+const unsetCurrentCity = city => ({
+  type: types.UNSET_CURRENT_CITY,
+  payload: city
+});
+
 export {
   add,
   addMultiple,
   remove,
   removeMultiple,
-  setCurrentCity
+  setCurrentCity,
+  unsetCurrentCity
 };
