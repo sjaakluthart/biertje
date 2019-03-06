@@ -52,6 +52,7 @@ h2 {
   line-height: 24px;
   font-weight: 600;
   margin-bottom: 12px;
+  cursor: pointer;
 }
 
 .app > header > h1:hover,
