@@ -41,6 +41,10 @@ class Breweries extends Component {
     const { postcodeArea } = this.state;
 
     getCityByPostcode(postcodeArea);
+
+    this.setState({
+      postcodeArea: ''
+    });
   }
 
 
