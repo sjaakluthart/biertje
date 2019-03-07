@@ -4,19 +4,26 @@ import isEmpty from 'lodash/isEmpty';
 import head from 'lodash/head';
 import breweries from '../breweries.json';
 import { actions as breweriesActions } from '../ducks/breweries';
+import { actions as loadingActions } from '../ducks/loading';
 
 // In an ideal world this API key should not be exposed! Use a custom backend to manage requests.
 const postcodeAPIKey = 'iGgfNuX45o8H7O7IZEWXJ4LihqlP1r1v8FNE2Sy0';
 // https://www.postcodeapi.nu/docs/
 
 const getBreweries = () => (
-  dispatch => (
+  (dispatch) => {
     // this simulates an API request to get the breweries
-    dispatch(breweriesActions.addMultiple(breweries.breweries))
-  )
+    dispatch(loadingActions.start('breweries'));
+
+    dispatch(breweriesActions.addMultiple(breweries.breweries));
+
+    dispatch(loadingActions.stop('breweries'));
+  }
 );
 
 const getCityByPostcodeResult = (dispatch, result) => {
+  dispatch(loadingActions.stop('postcode'));
+
   const postcodes = get(result, 'data._embedded.postcodes') || [];
 
   if (isEmpty(postcodes)) {
@@ -35,6 +42,13 @@ const getCityByPostcodeResult = (dispatch, result) => {
   return dispatch(breweriesActions.setCurrentCity(city));
 };
 
+const getCityByPostcodeError = (dispatch, error) => {
+  // TODO: Add error handling
+  console.log(error); // eslint-disable-line no-console
+
+  return dispatch(loadingActions.stop('postcode'));
+};
+
 const getCityByPostcode = postcodeArea => (
   (dispatch) => {
     const options = {
@@ -48,11 +62,12 @@ const getCityByPostcode = postcodeArea => (
       }
     };
 
+    dispatch(loadingActions.start('postcode'));
+
     axios.request(options)
       .then(
         result => getCityByPostcodeResult(dispatch, result),
-        // TODO: Add error handling
-        error => console.log(error) // eslint-disable-line no-console
+        error => getCityByPostcodeError(dispatch, error)
       );
   }
 );
