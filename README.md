@@ -32,7 +32,16 @@ This project uses the ['ducks'](https://github.com/erikras/ducks-modular-redux) 
 - `store.js` Redux store setup
 - `styles.css` Application styles
 
-### Attribution
+## Improvements
+
+- Add more breweries and beers.
+- Add a geolocation lookup based on postcode.
+- Implement loaders for API requests.
+- Add empty states.
+- Connect `breweries` and `beers`. View all beers by a brewery for example.
+- Add better styles for larger screens.
+
+## Attribution
 
 This project uses vector images from [the Noun Project](https://thenounproject.com/).
 
