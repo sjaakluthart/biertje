@@ -50,7 +50,7 @@ class Beers extends Component {
               key={style}
               onClick={() => this.handleStyleClick(style)}
             >
-              {style}
+              <span>{style}</span>
             </section>
           ))}
         </section>
