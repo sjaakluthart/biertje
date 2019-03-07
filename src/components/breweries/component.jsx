@@ -21,6 +21,12 @@ class Breweries extends Component {
     getBreweries();
   }
 
+  componentWillUnmount() {
+    const { unsetCurrentCity } = this.props;
+
+    unsetCurrentCity();
+  }
+
   handleInputChange = (event) => {
     const { postcodeArea } = this.state;
     const { unsetCurrentCity } = this.props;
