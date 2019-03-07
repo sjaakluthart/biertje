@@ -30,6 +30,14 @@ This project uses the ['ducks'](https://github.com/erikras/ducks-modular-redux) 
 - `store.js` Redux store setup
 - `styles.css` Application styles
 
+### Attribution
+
+This project uses vector images from [the Noun Project](https://thenounproject.com/).
+
+- [Beer by Smalllike from the Noun Project](https://thenounproject.com/icon/2239607/)
+- [Clock by sasicreatives from the Noun Project](https://thenounproject.com/icon/2262057/)
+- [Location by sasicreatives from the Noun Project](https://thenounproject.com/icon/2262016/)
+
 ## Available Scripts
 
 In the project directory, you can run:
