@@ -28,7 +28,7 @@ This project uses the ['ducks'](https://github.com/erikras/ducks-modular-redux) 
 - `beers.json` and `breweries.json` Raw data. These are added to the Redux state with operations.
 - `index.js` Entry point for [Create React App](https://github.com/facebook/create-react-app)
 - `reset.css` Provides a blank canvas for application styles, see https://meyerweb.com/eric/tools/css/reset/
-- `root-reducer.js` Combines all the duck's reducer in a single `root` reducer.
+- `root-reducer.js` Combines all the duck reducers in a single `root` reducer.
 - `store.js` Redux store setup
 - `styles.css` Application styles
 
