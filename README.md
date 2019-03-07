@@ -4,6 +4,8 @@ This project is an intake assignment for [Oberon](https://www.oberon.nl/). It al
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+View the project on [GitHub pages](https://sjaakluthart.github.io/biertje/).
+
 ## Patterns used
 
 This project consists of a [React](https://reactjs.org/) frontend with a [Redux](https://redux.js.org/) state container.
