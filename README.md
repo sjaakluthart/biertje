@@ -32,7 +32,11 @@ This project uses the ['ducks'](https://github.com/erikras/ducks-modular-redux) 
 - `store.js` Redux store setup
 - `styles.css` Application styles
 
-## Improvements
+## Acknowledgements
+
+This project is quite over engineered, I wanted to show how I would tackle structuring a more complex frontend application. For example both `Breweries` and `Beers` sections could be done in only one component file. The same applies for the Redux structure and use of the 'ducks' pattern.
+
+### Improvements
 
 - Add more breweries and beers.
 - Add a geolocation lookup based on postcode.
